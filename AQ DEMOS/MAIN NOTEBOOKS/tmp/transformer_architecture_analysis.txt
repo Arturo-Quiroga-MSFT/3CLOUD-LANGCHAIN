@@ -1,0 +1,13 @@
+1. Introduction to Transformer Architecture
+2. Historical Background: From Sequence-to-Sequence to Transformers
+3. Core Components of Transformer Architecture
+4. Self-Attention Mechanism and Scaled Dot-Product Attention
+5. Positional Encoding in Transformers
+6. Feedforward Neural Networks and Layer Normalization
+7. Multi-Head Attention: Concept and Advantages
+8. Encoder and Decoder: Architectural Details
+9. Training a Transformer: Optimization Techniques
+10. Transformer Models: GPT, BERT, and Beyond
+11. Applications in Natural Language Processing and Beyond
+12. Challenges and Limitations of Transformer Models
+13. Recent Innovations and Future Directions

@@ -1,0 +1,66 @@
+Based on what you know about this database contents, please provide some meaningful questions to ask about it
+
+Which products generate the highest total revenue?
+
+what are the top ten customers by amount spent?
+
+
+
+
+Here are some questions you can ask about this database:
+
+### General Questions:
+1. What tables are available in the database?
+2. What are the relationships between the tables?
+3. What are the primary keys and foreign keys in the tables?
+
+### Table-Specific Questions:
+#### Address Table:
+- What information is stored in the Address table?
+- How many addresses are there in the database?
+
+#### Customer Table:
+- What details are stored about customers?
+- How can I find customers based on their name or ID?
+
+#### CustomerAddress Table:
+- How are customers linked to their addresses?
+- Can I retrieve all addresses for a specific customer?
+
+#### Product Table:
+- What products are available in the database?
+- How can I find products based on their name or ID?
+
+#### ProductCategory Table:
+- What categories of products are available?
+- How can I find all products in a specific category?
+
+#### ProductDescription Table:
+- What descriptions are available for products?
+- How can I find the description for a specific product?
+
+#### ProductModel Table:
+- What models of products are available?
+- How can I find all products belonging to a specific model?
+
+#### ProductModelProductDescription Table:
+- How are product models linked to their descriptions?
+- Can I retrieve all descriptions for a specific product model?
+
+#### SalesOrderDetail Table:
+- What details are stored about sales orders?
+- How can I find all products in a specific sales order?
+
+#### SalesOrderHeader Table:
+- What information is stored in the SalesOrderHeader table?
+- How can I find all sales orders for a specific customer?
+
+#### Views (vGetAllCategories, vProductAndDescription, vProductModelCatalogDescription):
+- What information is provided by the views?
+- How can I use the views to simplify queries?
+
+### Analytical Questions:
+1. What is the total number of sales orders in the database?
+2. What is the most popular product based on sales?
+3. Which customer has placed the highest number of orders?
+4. What is the total revenue generated from sales?

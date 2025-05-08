@@ -16,27 +16,27 @@ async def run_agent(query):
         {
             "tavily": {
                 "command": "python",
-                "args": ["/Users/arturoquiroga/GITHUB/langchain-1/AQ-NOTEBOOKS/MCP/mcp_tavily_server.py"],
+                "args": ["/Users/arturoquiroga/GITHUB/3CLOUD-LANGCHAIN/AQ DEMOS/MCP/mcp_tavily_server.py"],
                 "transport": "stdio",
             },
             "youtube_transcript": {
                 "command": "python",
-                "args": ["/Users/arturoquiroga/GITHUB/langchain-1/AQ-NOTEBOOKS/MCP/mcp_yt_transcript_server.py"],
+                "args": ["/Users/arturoquiroga/GITHUB/3CLOUD-LANGCHAIN/AQ DEMOS/MCP/mcp_yt_transcript_server.py"],
                 "transport": "stdio",
             }, 
             "math": {
                 "command": "python",
-                "args": ["/Users/arturoquiroga/GITHUB/langchain-1/AQ-NOTEBOOKS/MCP/mcp_math_server.py"],
+                "args": ["/Users/arturoquiroga/GITHUB/3CLOUD-LANGCHAIN/AQ DEMOS/MCP/mcp_math_server.py"],
                 "transport": "stdio",
             },
             "exchange_rate": {
                 "command": "python",
-                "args": ["/Users/arturoquiroga/GITHUB/langchain-1/AQ-NOTEBOOKS/MCP/mcp_exchange_rate_fetcher_server.py"],
+                "args": ["/Users/arturoquiroga/GITHUB/3CLOUD-LANGCHAIN/AQ DEMOS/MCP/mcp_exchange_rate_fetcher_server.py"],
                 "transport": "stdio",
             },       
             "weather": {
                 "command": "python",
-                "args": ["/Users/arturoquiroga/GITHUB/langchain-1/AQ-NOTEBOOKS/MCP/mcp_weather_server.py"],
+                "args": ["/Users/arturoquiroga/GITHUB/3CLOUD-LANGCHAIN/AQ DEMOS/MCP/mcp_weather_server.py"],
                 "transport": "stdio",
             },
         }

@@ -1,0 +1,89 @@
+query,output,timestamp
+what are the top ten customers by amount spent?,"### Result: Top 10 Customers by Amount Spent
+
+| Customer ID | First Name   | Last Name      | Total Spent      |
+|-------------|--------------|----------------|------------------|
+| 29736       | Terry        | Eminhizer      | 108561.8317      |
+| 30050       | Krishna      | Sunkammurali   | 98278.6910       |
+| 29546       | Christopher  | Beck           | 88812.8625       |
+| 29957       | Kevin        | Liu            | 83858.4261       |
+| 29796       | Jon          | Grande         | 78029.6898       |
+| 29929       | Jeffrey      | Kurtz          | 74058.8078       |
+| 29932       | Rebecca      | Laszlo         | 63980.9884       |
+| 29660       | Anthony      | Chor           | 57634.6342       |
+| 29938       | Frank        | Campbell       | 41622.0511       |
+| 29485       | Catherine    | Abel           | 39785.3304       |
+
+---
+
+### SQL Query:
+
+```sql
+SELECT C.CustomerID, C.FirstName, C.LastName, SUM(SOH.SubTotal) AS TotalSpent
+FROM SalesLT.Customer AS C
+JOIN SalesLT.SalesOrderHeader AS SOH ON C.CustomerID = SOH.CustomerID
+GROUP BY C.CustomerID, C.FirstName, C.LastName
+ORDER BY TotalSpent DESC
+OFFSET 0 ROWS FETCH NEXT 10 ROWS ONLY;
+```
+
+### Explanation:
+
+1. **Join Tables**:
+   - The `Customer` table is joined with the `SalesOrderHeader` table using `CustomerID`.
+
+2. **Aggregate Total Spent**:
+   - The `SUM(SOH.SubTotal)` calculates the total amount spent by each customer by summing the subtotal of all their sales orders.
+
+3. **Group by Customer**:
+   - Grouping is performed on `CustomerID`, `FirstName`, and `LastName` to consolidate spending for each customer.
+
+4. **Sort and Limit**:
+   - Results are sorted in descending order by `TotalSpent` to prioritize highest spenders.
+   - Limited to the top 10 customers using `OFFSET 0 ROWS FETCH NEXT 10 ROWS ONLY`.
+
+These are your top contributors to revenue. Let me know if you'd like further details or metrics for specific customers!",2025-05-08 11:14:35.409942
+what are the top ten customers by amount spent?,"### Result: Top 10 Customers by Amount Spent
+
+| Customer ID | First Name   | Last Name      | Total Spent      |
+|-------------|--------------|----------------|------------------|
+| 29736       | Terry        | Eminhizer      | 108561.8317      |
+| 30050       | Krishna      | Sunkammurali   | 98278.6910       |
+| 29546       | Christopher  | Beck           | 88812.8625       |
+| 29957       | Kevin        | Liu            | 83858.4261       |
+| 29796       | Jon          | Grande         | 78029.6898       |
+| 29929       | Jeffrey      | Kurtz          | 74058.8078       |
+| 29932       | Rebecca      | Laszlo         | 63980.9884       |
+| 29660       | Anthony      | Chor           | 57634.6342       |
+| 29938       | Frank        | Campbell       | 41622.0511       |
+| 29485       | Catherine    | Abel           | 39785.3304       |
+
+---
+
+### SQL Query:
+
+```sql
+SELECT C.CustomerID, C.FirstName, C.LastName, SUM(SOH.SubTotal) AS TotalSpent
+FROM SalesLT.Customer AS C
+JOIN SalesLT.SalesOrderHeader AS SOH ON C.CustomerID = SOH.CustomerID
+GROUP BY C.CustomerID, C.FirstName, C.LastName
+ORDER BY TotalSpent DESC
+OFFSET 0 ROWS FETCH NEXT 10 ROWS ONLY;
+```
+
+### Explanation:
+
+1. **Join Tables**:
+   - The `Customer` table is joined with the `SalesOrderHeader` table using `CustomerID`.
+
+2. **Aggregate Total Spent**:
+   - The `SUM(SOH.SubTotal)` calculates the total amount spent by each customer by summing the subtotal of all their sales orders.
+
+3. **Group by Customer**:
+   - Grouping is performed on `CustomerID`, `FirstName`, and `LastName` to consolidate spending for each customer.
+
+4. **Sort and Limit**:
+   - Results are sorted in descending order by `TotalSpent` to prioritize highest spenders.
+   - Limited to the top 10 customers using `OFFSET 0 ROWS FETCH NEXT 10 ROWS ONLY`.
+
+These are your top contributors to revenue. Let me know if you'd like further details or metrics for specific customers!",2025-05-08 11:15:15.642888

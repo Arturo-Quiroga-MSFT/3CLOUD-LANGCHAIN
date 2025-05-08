@@ -1,0 +1,13 @@
+1. Introduction
+2. Background and Development of Transformer Architecture
+3. Key Components of Transformer Architecture
+4. Self-Attention Mechanism
+5. Encoder-Decoder Structure
+6. Positional Encoding
+7. Multi-Head Attention
+8. Feedforward Networks in Transformers
+9. Optimization Techniques and Training
+10. Applications of Transformers
+11. Comparison with Other Architectures
+12. Challenges and Limitations
+13. Future Directions

@@ -19,6 +19,6 @@ async def get_exchange_rate(from_currency: str, to_currency: str) -> str:
 
 if __name__ == "__main__":
     mcp.run(transport="stdio")  # Run the server, using standard input/output for communication
-    # mcp.run(transport="sse")  # Uncomment this line to run the server using Server-Sent Events (SSE)
+    #mcp.run(transport="sse")  # Uncomment this line to run the server using Server-Sent Events (SSE)
     # mcp.run(transport="http")  # Uncomment this line to run the server using HTTP
     # mcp.run(transport="grpc")  # Uncomment this line to run the server using gRPC

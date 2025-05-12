@@ -87,3 +87,77 @@ OFFSET 0 ROWS FETCH NEXT 10 ROWS ONLY;
    - Limited to the top 10 customers using `OFFSET 0 ROWS FETCH NEXT 10 ROWS ONLY`.
 
 These are your top contributors to revenue. Let me know if you'd like further details or metrics for specific customers!",2025-05-08 11:15:15.642888
+Which products are most frequently included in large orders?,"### Result table: Email addresses of customers with the most orders
+
+| Email Address                     | Total Orders   |
+|-----------------------------------|----------------|
+| andrea1@adventure-works.com       | 1              |
+| anthony0@adventure-works.com      | 1              |
+| brigid0@adventure-works.com       | 1              |
+| catherine0@adventure-works.com    | 1              |
+| christopher1@adventure-works.com  | 1              |
+| ... (Additional rows available)   |
+
+### Final SQL Query:
+```sql
+SELECT C.EmailAddress, COUNT(SOH.SalesOrderID) AS TotalOrders
+FROM SalesLT.Customer AS C
+INNER JOIN SalesLT.SalesOrderHeader AS SOH ON C.CustomerID = SOH.CustomerID
+GROUP BY C.EmailAddress
+ORDER BY TotalOrders DESC;
+```
+
+### Explanation:
+1. **Join Operation**:
+   - The query joins `Customer` with `SalesOrderHeader` using `CustomerID` to match customers with their orders.
+
+2. **Aggregate Orders**:
+   - `COUNT(SOH.SalesOrderID)` calculates the total orders associated with each customer.
+
+3. **Group Customers**:
+   - Grouping by `EmailAddress` ensures order counts are aggregated by customer emails.
+
+4. **Sort Results**:
+   - Results are sorted in descending order of `TotalOrders` to show customers with the highest number of orders.
+
+### Observation:
+All listed customers appear to have placed 1 order each. If you'd like to dive deeper into customers with higher numbers of orders, make sure there is sufficient data reflecting multiple orders per customer, or let me know if you need additional analysis!",2025-05-12 12:12:11.239256
+Which products are most frequently included in large orders?,"### Result table: Products most frequently included in large orders (Order quantity > 5)
+
+| Product Name                     | Frequency       |
+|----------------------------------|-----------------|
+| Water Bottle - 30 oz.            | 6               |
+| Women's Mountain Shorts, S       | 5               |
+| Classic Vest, S                  | 5               |
+| Hydration Pack - 70 oz.          | 5               |
+| Bike Wash - Dissolver            | 5               |
+| ... (Additional rows available)  |
+
+### Final SQL Query:
+```sql
+SELECT P.Name, COUNT(SD.SalesOrderDetailID) AS Frequency
+FROM SalesLT.Product AS P
+INNER JOIN SalesLT.SalesOrderDetail AS SD ON P.ProductID = SD.ProductID
+WHERE SD.OrderQty > 5
+GROUP BY P.Name
+ORDER BY Frequency DESC;
+```
+
+### Explanation:
+1. **Join Operation**:
+   - The `Product` table is joined with the `SalesOrderDetail` table using `ProductID`.
+
+2. **Filtering Criteria**:
+   - The query filters orders where `OrderQty` exceeds 5 to focus on large orders.
+
+3. **Aggregate and Count**:
+   - `COUNT(SD.SalesOrderDetailID)` calculates the frequency of each product appearing in large orders.
+
+4. **Group Products**:
+   - Grouping by `P.Name` aggregates the count for each product.
+
+5. **Sort Results**:
+   - Products are sorted by frequency in descending order to rank the most commonly ordered items.
+
+### Observation:
+Items like ""Water Bottle - 30 oz."" and ""Women's Mountain Shorts, S"" appear most frequently in large orders. Let me know if you'd like further exploration or analysis!",2025-05-12 12:17:28.778772

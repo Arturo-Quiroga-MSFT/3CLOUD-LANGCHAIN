@@ -9,10 +9,10 @@ load_dotenv()
 # Example query
 # "What is weather in new york"
 # "What is FastMCP?"
-# "summarize this youtube video in 200 words, here is a video link: https://www.youtube.com/watch?v=2f3K43FHRKo&ab_channel=OpenAI"
+# "summarize this youtube video in 300 words, here is a video link: https://www.youtube.com/watch?v=2f3K43FHRKo&ab_channel=OpenAI"
 # "What is 2+2?"
 # "get me the rate for mexican pesos to canadian dollars"
-# "summarize this youtube video in 200 words, here is a video link: https://www.youtube.com/watch?v=7j1t3UZA1TY&ab_channel=IBMTechnology"
+# "summarize this youtube video in 300 words, here is a video link: https://www.youtube.com/watch?v=7j1t3UZA1TY&ab_channel=IBMTechnology"
 query = input("Enter your Query:")
 
 # Define llm

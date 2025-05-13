@@ -1,0 +1,15 @@
+
+1. Introduction
+2. Background and Evolution
+3. Core Components of Transformer Architecture
+    a. Multi-Head Attention Mechanism
+    b. Positional Encoding
+    c. Feed Forward Neural Network
+    d. Layer Normalization
+4. Encoder-Decoder Structure
+    a. Encoder
+    b. Decoder
+5. Training Paradigm: Loss Functions and Optimization
+6. Applications and Impact
+7. Limitations and Challenges
+8. Future Directions for Transformer-based Models
